@@ -1,0 +1,140 @@
+@font-face {
+    font-family: "Andada";
+    font-weight: 600;
+    font-variation-settings: "wght" 600;
+    /* Unfortunately, controlling variable fonts like this
+       is only supported on FireFox. Thanks Chrome. */
+    src: url("./fonts/Andada.ttf");
+}
+
+:root {
+    --background: #F9FAF9;
+    --text: #1E2034;
+    --color: #b47ff0;
+}
+
+body {
+    margin: 0;
+    font-family: "Andada", sans-serif;
+    background-color: var(--background);
+    color: var(--text);
+}
+
+h1, h2 {
+    font-weight: 800;
+    font-variation-settings: "wght" 800;
+}
+
+p {
+    font-size: 1.1em;
+}
+
+a, a:visited {
+    color: var(--text);
+    text-decoration: dotted underline var(--color) 0.2em;
+}
+
+a:hover {
+    color: var(--color);
+}
+
+nav {
+    position: relative;
+    left: 0;
+    max-width: fit-content;
+    user-select: none;
+}
+
+nav ul {
+    display: flex;
+    margin: 0;
+    padding: 1em;
+    font-size: 1.2em;
+}
+
+nav li::marker {
+    content: none;
+}
+
+nav li::after {
+    content: "/";
+    padding: 0 .5em;
+}
+
+nav li:last-of-type::after {
+    content: none;
+}
+
+hgroup {
+    min-width: 100vw;
+    padding: 2em 0;
+    text-align: center;
+}
+
+hgroup h1 {
+    margin: 0;
+    font-size: 2.5em;
+}
+
+section {
+    margin: 0 10vw;
+}
+
+section h2 {
+    text-align: center;
+}
+
+section hr {
+    color: var(--text);
+}
+
+section p {
+    text-align: justify;
+    hyphens: auto;
+}
+
+section strong {
+    font-weight: 800;
+    font-variation-settings: "wght" 800;
+}
+
+figure {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: .5em;
+    margin: 0;
+}
+
+figcaption {
+    font-style: italic;
+    font-size: 1em;
+}
+
+figure.inline {
+    float: right;
+    padding: 2em;
+}
+
+figure > math {
+    user-select: none;
+    font-size: 1.2em;
+}
+
+figure[role="group"].row {
+    flex-direction: row;
+    gap: 1em;
+    justify-content: center;
+}
+
+.highlighted {
+    color: var(--color);
+}
+
+footer {
+    margin: 2em 10vw;
+    text-align: center;
+    font-size: 1.1em;
+    padding-top: 1em;
+    border-top: var(--text) solid 2px;
+}
