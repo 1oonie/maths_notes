@@ -10,23 +10,117 @@
 :root {
     --background: #F9FAF9;
     --text: #1E2034;
-    --color: #b47ff0;
+    --color: #B47FF0;
+    --highlight: #6D17CF;
+
+    max-width: 100vw;
+    padding: 0;
+    margin: 0;
 }
 
 body {
+    max-width: 100vw;
     margin: 0;
+    padding: 0;
+
     font-family: "Andada", sans-serif;
     background-color: var(--background);
     color: var(--text);
 }
 
-h1, h2 {
-    font-weight: 800;
-    font-variation-settings: "wght" 800;
+section {
+    margin: 0 5vw;
+}
+
+footer {
+    margin: 2em 5vw;
+    text-align: center;
+    padding-top: 1em;
+    border-top: var(--text) solid 2px;
 }
 
 p {
-    font-size: 1.1em;
+    font-size: 1.5em;
+}
+
+figcaption {
+    font-size: 1.3em;
+    font-style: italic;
+}
+
+h2 {
+    font-size: 1.9em;
+}
+
+figure > math {
+    font-size: 1.5em;
+    user-select: none;
+}
+
+li > a {
+    font-size: 1.5em;
+}
+
+li::marker {
+    font-size: 1.5em;
+}
+
+@media screen and (min-width: 1000px) {
+    section {
+        margin: 0 10vw;
+    }
+    footer {
+        margin: 2em 10vw;
+    }
+
+    p {
+        font-size: 1.4em;
+    }
+    
+    figcaption {
+        font-size: 1.2em;
+        font-style: italic;
+    }
+    
+    h2 {
+        font-size: 1.8em;
+    }
+    
+    figure > math {
+        font-size: 1.4em;
+        user-select: none;
+    }
+    
+    li > a {
+        font-size: 1.4em;
+    }
+    
+    li::marker {
+        font-size: 1.4em;
+    }
+}
+
+@media screen and (min-width: 1500px) {
+    section {
+        margin: 0 20vw;
+    }
+    footer {
+        margin: 2em 20vw;
+    }
+}
+
+@media screen and (min-width: 2000px) {
+    section {
+        margin: 0 30vw;
+    }
+    footer {
+        margin: 2em 30vw;
+    }
+}
+
+h1, h2 {
+    font-weight: 800;
+    font-variation-settings: "wght" 800;
 }
 
 a, a:visited {
@@ -35,7 +129,7 @@ a, a:visited {
 }
 
 a:hover {
-    color: var(--color);
+    color: var(--highlight);
 }
 
 nav {
@@ -59,6 +153,7 @@ nav li::marker {
 nav li::after {
     content: "/";
     padding: 0 .5em;
+    font-size: 1.4em;
 }
 
 nav li:last-of-type::after {
@@ -76,16 +171,20 @@ hgroup h1 {
     font-size: 2.5em;
 }
 
-section {
-    margin: 0 10vw;
-}
-
 section h2 {
     text-align: center;
 }
 
 section hr {
     color: var(--text);
+}
+
+section ol li {
+    padding-bottom: 1em;   
+}
+
+section ol li:last-child {
+    padding-bottom: 0;
 }
 
 section p {
@@ -106,35 +205,20 @@ figure {
     margin: 0;
 }
 
-figcaption {
-    font-style: italic;
-    font-size: 1em;
-}
-
 figure.inline {
     float: right;
     padding: 2em;
 }
 
-figure > math {
-    user-select: none;
-    font-size: 1.2em;
-}
-
 figure[role="group"].row {
     flex-direction: row;
+    flex-wrap: wrap;
     gap: 1em;
     justify-content: center;
 }
 
 .highlighted {
-    color: var(--color);
-}
-
-footer {
-    margin: 2em 10vw;
-    text-align: center;
-    font-size: 1.1em;
-    padding-top: 1em;
-    border-top: var(--text) solid 2px;
+    color: var(--highlight);
+    font-weight: 800;
+    font-variation-settings: "wght" 800;
 }
