@@ -57,11 +57,12 @@ figure > math {
     user-select: none;
 }
 
-li > a {
+nav li > a {
     font-size: 1.5em;
 }
 
-li::marker {
+section ol li {
+    padding-bottom: .4em; 
     font-size: 1.5em;
 }
 
@@ -91,11 +92,15 @@ li::marker {
         user-select: none;
     }
     
-    li > a {
+    nav li > a {
         font-size: 1.4em;
     }
     
-    li::marker {
+    nav li::marker {
+        font-size: 1.4em;
+    }
+
+    section ol li {
         font-size: 1.4em;
     }
 }
@@ -179,10 +184,6 @@ section hr {
     color: var(--text);
 }
 
-section ol li {
-    padding-bottom: 1em;   
-}
-
 section ol li:last-child {
     padding-bottom: 0;
 }
@@ -217,8 +218,21 @@ figure[role="group"].row {
     justify-content: center;
 }
 
+figcaption {
+    padding: 0 2em;
+    text-align: center;
+}
+
 .highlighted {
     color: var(--highlight);
     font-weight: 800;
     font-variation-settings: "wght" 800;
+}
+
+mtable.equation mtd:nth-child(1) {
+    text-align: right;
+}
+
+mtable.equation mtd:nth-child(3) {
+    text-align: left;
 }
